@@ -8,7 +8,7 @@ const productRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
 const userRoutes = require("./api/routes/users");
 
-const uri = 'mongodb+srv://RajatSablok:3EkKtJoFl0TbtCbM@node-shop-app-gvt3q.mongodb.net/test?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://RajatSablok:' + process.env.MONGO_ATLAS_PW + '@node-shop-app-gvt3q.mongodb.net/test?retryWrites=true&w=majority'
 
 mongoose
   .connect( uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
